@@ -23,7 +23,10 @@
     "url": "https://github.com/cleverbeagle/dates/issues"
   },
   "homepage": "http://packages.cleverbeagle.com/dates/usage",
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.13"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
