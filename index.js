@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.add = exports.timeago = exports.monthDayYearAtTime = exports.monthDayYear = undefined;
+exports.year = exports.add = exports.timeago = exports.monthDayYearAtTime = exports.monthDayYear = undefined;
 
 var _moment = require('moment');
 
@@ -25,6 +25,10 @@ var timeago = exports.timeago = function timeago(timestamp, timezone) {
   return !timezone ? (0, _moment2.default)(timestamp).fromNow() : (0, _moment2.default)(timestamp).tz(timezone).fromNow();
 };
 
-var add = exports.add = function add(date, amount, range, timezone) {
-  return !timezone ? (0, _moment2.default)(date).add(amount, range).format() : (0, _moment2.default)(date).tz(timezone).add(amount, range).format();
+var add = exports.add = function add(timestamp, amount, range, timezone) {
+  return !timezone ? (0, _moment2.default)(timestamp).add(amount, range).format() : (0, _moment2.default)(timestamp).tz(timezone).add(amount, range).format();
+};
+
+var year = exports.year = function year(timestamp, timezone) {
+  return !timezone ? (0, _moment2.default)(timestamp).format('YYYY') : (0, _moment2.default)(timestamp).tz(timezone).format('YYYY');
 };
