@@ -16,7 +16,12 @@ export const timeago = (timestamp, timezone) => (
   moment(timestamp).tz(timezone).fromNow()
 );
 
-export const add = (date, amount, range, timezone) =>(
-  !timezone ? moment(date).add(amount, range).format() :
-  moment(date).tz(timezone).add(amount, range).format()
+export const add = (timestamp, amount, range, timezone) =>(
+  !timezone ? moment(timestamp).add(amount, range).format() :
+  moment(timestamp).tz(timezone).add(amount, range).format()
+);
+
+export const year = (timestamp, timezone) =>(
+  !timezone ? moment(timestamp).format('YYYY') :
+  moment(timestamp).tz(timezone).format('YYYY')
 );

@@ -1,6 +1,6 @@
 {
   "name": "@cleverbeagle/dates",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Date and time helpers using moment and moment-timezone.",
   "main": "index.js",
   "scripts": {

@@ -4,6 +4,7 @@ import {
   monthDayYearAtTime,
   timeago,
   add,
+  year,
 } from './index';
 
 test('it converts a timestamp to Month Day, Year syntax', () => {
@@ -45,4 +46,9 @@ test('it adds days to a timestamp and returns an ISO-8601 string with a timezone
   // to returning string with user's timezone (e.g., -05:00) which is unpredictable here.
   const futureString = add('2017-05-23T00:00:00Z', 3, 'days', 'UTC');
   expect(futureString).toBe('2017-05-26T00:00:00Z');
+});
+
+test('it returns the current year as a string', () => {
+  // +1900 corrects weird JavaScript .getYear() offset (see: https://www.tutorialspoint.com/javascript/date_getyear.htm)
+  expect(year()).toBe(((new Date()).getYear() + 1900).toString());
 });
