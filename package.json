@@ -1,6 +1,6 @@
 {
   "name": "@cleverbeagle/dates",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Date and time helpers using moment and moment-timezone.",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/cleverbeagle/dates/issues"
   },
-  "homepage": "http://packages.cleverbeagle.com/dates/usage",
+  "homepage": "http://cleverbeagle.com/packages/dates/usage",
   "dependencies": {
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.13"
