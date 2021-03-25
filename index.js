@@ -15,6 +15,10 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
+var monthDay = (exports.monthDay = function monthDay(timestamp, timezone) {
+  return !timezone ? (0, _moment2.default)(timestamp).format("MMMM Do") : (0, _moment2.default)(timestamp).tz(timezone).format("MMMM Do");
+});
+
 var monthDayYear = (exports.monthDayYear = function monthDayYear(timestamp, timezone) {
   return !timezone ? (0, _moment2.default)(timestamp).format("MMMM Do, YYYY") : (0, _moment2.default)(timestamp).tz(timezone).format("MMMM Do, YYYY");
 });

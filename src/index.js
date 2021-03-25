@@ -1,6 +1,8 @@
 import moment from "moment";
 import "moment-timezone";
 
+export const monthDay = (timestamp, timezone) => (!timezone ? moment(timestamp).format("MMMM Do, YYYY") : moment(timestamp).tz(timezone).format("MMMM Do"));
+
 export const monthDayYear = (timestamp, timezone) =>
   !timezone ? moment(timestamp).format("MMMM Do, YYYY") : moment(timestamp).tz(timezone).format("MMMM Do, YYYY");
 
